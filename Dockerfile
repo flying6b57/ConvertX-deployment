@@ -83,4 +83,5 @@ EXPOSE 3000/tcp
 # used for calibre
 ENV QTWEBENGINE_CHROMIUM_FLAGS="--no-sandbox"
 ENV NODE_ENV=production
+RUN mkdir -p /app/data && chmod 777 /app/data
 ENTRYPOINT [ "bun", "run", "./src/index.tsx" ]
